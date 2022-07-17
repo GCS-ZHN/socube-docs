@@ -43,7 +43,7 @@ Pip是一个Python提供的包管理器，可以下载各类Python开发的软�
 
 ### 3. 执行pip命令安装
 
-在终端中执行前述命令安装SoCube V1.0，其中对国内用户推荐使用清华大学镜像源加速软件下载。当看到“Successfully installed \*\*\* socube-1.0”即表示下载安装成功。安装成功后继续在当前终端输入“socube -v”可以看到软件版本提示。国内用户推荐使用-i参数指定清华大学镜像源https://pypi.tuna.tsinghua.edu.cn/simple/。
+在终端中执行前述命令安装SoCube V1.0，其中对国内用户推荐使用清华大学镜像源加速软件下载。当看到“Successfully installed \*\*\* socube-1.0”即表示下载安装成功。安装成功后继续在当前终端输入`socube -v`可以看到软件版本提示。国内用户推荐使用-i参数指定清华大学镜像源https://pypi.tuna.tsinghua.edu.cn/simple/。
 
 ![执行pip安装](.gitbook/assets/fig4.png)
 {% endtab %}

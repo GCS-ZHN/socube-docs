@@ -1,10 +1,23 @@
 {
     "plugins": [
-        "highlight",
-        "search",
-        "sharing",
-        "fontsettings",
         "livereload",
-        "tabs2"
-    ]
+        "tabs2",
+        "popup",
+        "code",
+        "github",
+        "splitter",
+        "prism",
+        "image-captions-extended",
+        "search-plus",
+        "-highlight",
+        "-search"
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/GCS-ZHN/SoCube"
+        },
+        "image-captions": {
+            "caption": "_CAPTION_"
+        }
+    }
 }
