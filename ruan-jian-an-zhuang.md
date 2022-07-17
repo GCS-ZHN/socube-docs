@@ -1,5 +1,21 @@
 # 软件安装
 
+## CUDA安装
+
+SoCube是基于深度卷积神经网络开发的，我们强烈建议用户在有NVIDIA GPU和NVIDIA CUDA计算套件的环境下，使用GPU加速计算。对于拥有支持CUDA的NVIDIA GPU，用户首先需要安装CUDA，这个可以从[NVIDIA官网](https://developer.nvidia.com/cuda-toolkit-archive)下载并安装。
+
+![Nvidia cuda下载页面](.gitbook/assets/fig7.png)
+
+安装完成后，用户可以在终端输入“nvidia-smi”，即可查看自己的显卡信息以及CUDA版本信息，如下图的显卡为GeForce RTX 3060，驱动版本为516.59，CUDA版本为11.7。
+
+```powershell
+nvidia-smi
+```
+
+![nvidia-smi](.gitbook/assets/fig8.png)
+
+## SoCube安装
+
 {% tabs %}
 {% tab title="Pip" %}
 ```bash
