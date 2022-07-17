@@ -4,7 +4,7 @@
 
 SoCube是基于深度卷积神经网络开发的，我们强烈建议用户在有NVIDIA GPU和NVIDIA CUDA计算套件的环境下，使用GPU加速计算。对于拥有支持CUDA的NVIDIA GPU，用户首先需要安装CUDA，这个可以从[NVIDIA官网](https://developer.nvidia.com/cuda-toolkit-archive)下载并安装。
 
-![Nvidia cuda下载页面](.gitbook/assets/fig7.png)
+![Nvidia cuda下载页面](assets/fig7.png)
 
 安装完成后，用户可以在终端输入“nvidia-smi”，即可查看自己的显卡信息以及CUDA版本信息，如下图的显卡为GeForce RTX 3060，驱动版本为516.59，CUDA版本为11.7。
 
@@ -12,7 +12,7 @@ SoCube是基于深度卷积神经网络开发的，我们强烈建议用户在�
 nvidia-smi
 ```
 
-![nvidia-smi](.gitbook/assets/fig8.png)
+![nvidia-smi](assets/fig8.png)
 
 ## SoCube安装
 
@@ -29,23 +29,23 @@ SoCube已经打包发布到Python官方仓库[PyPi](https://pypi.org/project/soc
 
 SoCube是基于Python语言开发的软件，需要依赖Python解释器来运行软件，因此需要安装。用户需要从[Python官网](https://www.python.org/getit/)下载Python。
 
-![Python官网](.gitbook/assets/fig1.jpg)
+![Python官网](assets/fig1.jpg)
 
 如下图，按安装包提示安装Python，并勾选将Python添加到PATH环境变量（该环境变量定义了终端命令的搜索路径，没有添加则无法直接在终端中使用Python）。
 
-![Python安装页面](.gitbook/assets/fig2.png)
+![Python安装页面](assets/fig2.png)
 
 ### 2. 打开终端命令环境
 
 Pip是一个Python提供的包管理器，可以下载各类Python开发的软件包，但它需要在终端中使用。Windows下提供了Windows PowerShell和Cmd两种终端，我们推荐使用PowerShell。使用“Win+R”快捷键并运行powershell快速进入PowerShell终端。
 
-![运行powershell](.gitbook/assets/fig3.jpg)
+![运行powershell](assets/fig3.jpg)
 
 ### 3. 执行pip命令安装
 
 在终端中执行前述命令安装SoCube V1.0，其中对国内用户推荐使用清华大学镜像源加速软件下载。当看到“Successfully installed \*\*\* socube-1.0”即表示下载安装成功。安装成功后继续在当前终端输入`socube -v`可以看到软件版本提示。国内用户推荐使用-i参数指定清华大学镜像源https://pypi.tuna.tsinghua.edu.cn/simple/。
 
-![执行pip安装](.gitbook/assets/fig4.png)
+![执行pip安装](assets/fig4.png)
 {% endtab %}
 
 {% tab title="Docker" %}

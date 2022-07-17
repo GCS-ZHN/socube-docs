@@ -14,11 +14,11 @@ SoCube和前面提到的pip一样，运行于终端下，这样的优势在于�
 socube --input "D:\data\pbmc-1C-dm.h5ad"
 ```
 
-![启动socube](.gitbook/assets/fig5.png)
+![启动socube](assets/fig5.png)
 
 等待软件运行完毕，二聚体检测结果以及中间文件默认会和输入文件放在一起，产生embedding、plots、models、outputs这几个文件夹。其中最终结果在“outputs/你的模型ID/”文件夹下以“final\_result”开头的CSV文件中。用Excel电子表格软件打开，可以看到其有下图三列。第一列是输入数据的细胞样本名称，由用户的输入决定；第二列是SoCube预测该样本为二聚体的概率值，大小介于0\~1之间；第三列是SoCube基于用户给定概率阈值或者默认阈值0.5得出的类型预测，singlet即单体正常细胞，doublet即二聚体。用户既可以使用概率值进行后续自定义筛选，也可以利用第三列进行直接筛选。
 
-![final\_result的的CSV文件文件](.gitbook/assets/fig6.png)
+![final\_result的的CSV文件文件](assets/fig6.png)
 
 （3）GPU加速运算（如果设备拥有独立NVIDIA显卡）
 
@@ -64,7 +64,7 @@ docker run -v /data:/workspace/datasets \
 
 SoCube的所有软件参数帮助可以在终端执行`socube --help`得到，这里对它进行详解。
 
-![](.gitbook/assets/fig9.png)
+![](assets/fig9.png)
 
 （1）--input
 
