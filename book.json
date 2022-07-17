@@ -17,7 +17,7 @@
     ],
     "pluginsConfig": {
         "github": {
-            "url": "https://github.com/GCS-ZHN/SoCube"
+            "url": "https://github.com/GCS-ZHN/socube"
         },
         "image-captions": {
             "caption": "_CAPTION_"
