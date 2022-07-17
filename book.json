@@ -1,4 +1,6 @@
 {
+    "title": "SoCube user manual",
+    "language": "en",
     "plugins": [
         "livereload",
         "tabs2",
@@ -6,6 +8,7 @@
         "code",
         "github",
         "splitter",
+        "sharing",
         "prism",
         "image-captions-extended",
         "search-plus",
@@ -19,5 +22,8 @@
         "image-captions": {
             "caption": "_CAPTION_"
         }
+    },
+    "styles": {
+        "website": "styles/website.css"
     }
 }
