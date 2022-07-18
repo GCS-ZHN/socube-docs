@@ -1,5 +1,7 @@
 # 引言
 
+<img src="assets/workflow.svg" alt="SoCube工作流程示意">
+
 ### 1.1 软件基本信息
 
 全称为“浙大单细胞高通量测序二聚体检测软件”，简称“SoCube”，版本号V1.0。SoCube V1.0是使用Python编写的无可视化用户操作页面（GUI）的终端命令式软件，可以运行于任何可运行Python语言的计算服务器、个人计算机等。

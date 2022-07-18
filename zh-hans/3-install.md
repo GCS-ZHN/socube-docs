@@ -29,7 +29,7 @@ SoCube已经打包发布到Python官方仓库[PyPi](https://pypi.org/project/soc
 
 SoCube是基于Python语言开发的软件，需要依赖Python解释器来运行软件，因此需要安装。用户需要从[Python官网](https://www.python.org/getit/)下载Python。
 
-![Python官网](assets/fig1.jpg)
+![Python官网](assets/fig1.png)
 
 如下图，按安装包提示安装Python，并勾选将Python添加到PATH环境变量（该环境变量定义了终端命令的搜索路径，没有添加则无法直接在终端中使用Python）。
 
@@ -39,13 +39,15 @@ SoCube是基于Python语言开发的软件，需要依赖Python解释器来运�
 
 Pip是一个Python提供的包管理器，可以下载各类Python开发的软件包，但它需要在终端中使用。Windows下提供了Windows PowerShell和Cmd两种终端，我们推荐使用PowerShell。使用“Win+R”快捷键并运行powershell快速进入PowerShell终端。
 
-![运行powershell](assets/fig3.jpg)
+![运行powershell](assets/fig3.png)
 
 ### 3. 执行pip命令安装
 
-在终端中执行前述命令安装SoCube V1.0，其中对国内用户推荐使用清华大学镜像源加速软件下载。当看到“Successfully installed \*\*\* socube-1.0”即表示下载安装成功。安装成功后继续在当前终端输入`socube -v`可以看到软件版本提示。国内用户推荐使用-i参数指定清华大学镜像源https://pypi.tuna.tsinghua.edu.cn/simple/。
+在终端中执行前述命令安装SoCube V1.0，其中对国内用户推荐使用清华大学镜像源加速软件下载。当看到“Successfully installed \*\*\* socube-1.0”即表示下载安装成功。安装成功后继续在当前终端输入`socube -v`可以看到软件版本提示。国内用户推荐使用-i参数指定(https://pypi.tuna.tsinghua.edu.cn/simple/)。
 
-![执行pip安装](assets/fig4.png)
+```bash
+pip install socube==1.0 -f https://pypi.tuna.tsinghua.edu.cn/simple/
+```
 {% endtab %}
 
 {% tab title="Docker" %}
