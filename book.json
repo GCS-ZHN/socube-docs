@@ -13,7 +13,8 @@
         "image-captions-extended",
         "search-plus",
         "-highlight",
-        "-search"
+        "-search",
+        "-lunr"
     ],
     "pluginsConfig": {
         "github": {
