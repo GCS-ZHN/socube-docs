@@ -22,12 +22,12 @@ socube -i "D:\data\pbmc-1C-dm.h5ad" --gpu-ids "0,1"
 
 ## 4.3 基于docker的使用
 
-和前面pip安装后使用本质上一样的，但需要通过docker来启动容器，因此有一定区别。
+和前面pip安装后使用本质上一样的，但需要通过docker来启动容器，因此有一定区别。其中“-v”、“--gpus”，“--name”都是`docker run`命令的启动参数，“-v”参数将外部文件夹挂载到docker容器内部路径，切忌不要忘了，因为socube读取的是docker容器内的文件路径。“--gpus”参数负责对容器使用gpu数量进行授权。
 
 {% tabs %}
 {% tab title="PowerShell" %}
 ```powershell
-docker run -v D:/data:/workspace/datasets `
+sudo docker run -v D:/data:/workspace/datasets `
        –gpus all `
        –name socube `
        gcszhn/socube:latest `
@@ -38,7 +38,7 @@ docker run -v D:/data:/workspace/datasets `
 
 {% tab title="Bash" %}
 ```bash
-docker run -v /data:/workspace/datasets \
+sudo docker run -v /data:/workspace/datasets \
        –gpus all \
        –name socube \
        gcszhn/socube:latest \

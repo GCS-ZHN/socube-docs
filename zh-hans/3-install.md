@@ -48,14 +48,24 @@ Pip是一个Python提供的包管理器，可以下载各类Python开发的软�
 ```bash
 pip install socube==1.0 -f https://pypi.tuna.tsinghua.edu.cn/simple/
 ```
+### 4. 关于PyTorch的注意事项
+虽然它还在执行`pip install socube`时自动安装，但有些镜像的版本可能下载的是cpu版本，因此建议用户检查一下安装的版本是否支持gpu（在正确配置GPU与CUDA时`torch.cuda.is_available()`会是`True`）。建议从[pytorch官方网站](https://pytorch.org/get-started/locally/)或pytorch官方的特定pip源下载torch。
+```bash
+pip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+```
 {% endtab %}
 
 {% tab title="Docker" %}
 ```bash
-docker pull gcszhn/socube:latest
+sudo docker pull gcszhn/socube:latest
 ```
 
-Docker是一种容器化的技术，它将软件隔离在一个沙盒中，称之为容器。容器与物理设备（称为容器的宿主机）之间、容器与容器之间均为相互隔离的状态。容器内拥有应用运行的完整软件环境而完全不依赖于宿主机的软件环境。容器可以作为镜像发布并在安装有docker的设备之间共享而无需额外的安装。SoCube已经构建了docker镜像，并发布在[Docker Hub](https://hub.docker.com/repository/docker/gcszhn/socube)。已经安装docker的用户可以在终端中执行上述命令获取SoCube。
+Docker是一种容器化的技术，它将软件隔离在一个沙盒中，称之为容器。容器与物理设备（称为容器的宿主机）之间、容器与容器之间均为相互隔离的状态。容器内拥有应用运行的完整软件环境而完全不依赖于宿主机的软件环境。容器可以作为镜像发布并在安装有docker的设备之间共享而无需额外的安装。SoCube已经构建了docker镜像，并发布在[Docker Hub](https://hub.docker.com/repository/docker/gcszhn/socube)。已经安装docker的用户可以在终端中执行上述命令获取SoCube。此外，有兴趣的用户可以自己打包一个自定义的docker镜像，Dockerflie已经开源提供。
+```bash
+git clone https://github.com/GCS-ZHN/socube.git
+cd socube
+sudo docker build docker -t gcszhn/socube
+```
 {% endtab %}
 {% endtabs %}
 
