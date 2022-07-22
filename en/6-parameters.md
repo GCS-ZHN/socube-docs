@@ -2,7 +2,15 @@
 
 SoCube's parameters help can be obtained by executing `socube --help` in the terminal, which is explained here. socube's help file output will automatically select Chinese or English depending on the user's system language and locale. If necessary, the user can change the system language setting to switch, for example, setting the `LC_ALL` environment variable to `en_US` under linux.
 
-![](assets/fig9.png)
+![SoCube help](assets/fig9.png)
+
+- --help
+
+The abbreviation is "-h". Get above parameter usage help.
+
+- --version
+
+The abbreviation is "-v". Print SoCube's version and copyright.
 
 - --input
 

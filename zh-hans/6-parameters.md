@@ -1,7 +1,15 @@
 # 参数详解
 SoCube的所有软件参数帮助可以在终端执行`socube --help`得到，这里对它进行详解。socube的help文档输出会根据用户系统的语言与区域设置自动选择中文或者英文。如有必要，用户可以修改系统语言设置切换，例如linux下设置`LC_ALL`环境变量为`en_US`。
 
-![](assets/fig9.png)
+![SoCube帮助](assets/fig9.png)
+
+- --help
+
+简写为“-h”。获取上述的参数使用帮助。
+
+- --version
+
+简写为“-v”，获取SoCube的版本和版权信息。
 
 - --input
 
