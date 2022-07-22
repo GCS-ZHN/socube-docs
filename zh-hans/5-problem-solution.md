@@ -1,5 +1,5 @@
 # 问题解决
-## 第三方库lapjv报错
+## 5.1 第三方库lapjv报错
 lapjv是socube不可或缺的依赖包，是实现J-V算法的重要工具。更多问题可以去其官方仓库[src-d/lapjv](https://github.com/src-d/lapjv)。
 ### 1. numpy缺失
 
@@ -28,7 +28,7 @@ pip install lapjv --no-binary lapjv
 ```
 - 安装对应版本的numpy，不过可能会和其他包的依赖numpy版本发生冲突。
 
-## 第三方库pytables出错
+## 5.2 第三方库pytables出错
 该库是pandas库的`to_hdf` API的依赖库。该包的某些版本缺少所需的动态C库，如tables-3.7.0-cp38-cp38-win_amd64，你可以尝试安装[PyPi](https://pypi.org/project/tables/)中列出的其他版本来解决。其他问题，你可以查看它的[官方GitHub仓库](https://github.com/PyTables/PyTables)。
 ```
 Traceback (most recent call last):
@@ -66,7 +66,7 @@ Traceback (most recent call last):
 ImportError: Missing optional dependency 'pytables'.  Use pip or conda to install pytables.
 ```
 
-## docker镜像使用出错
+## 5.3 docker镜像使用出错
 ### 1. nvidia-container-cli: initialization error
  docker在windows下默认依赖后端是WSL2。而较早版本的windows 10的WSL2不支持GPU，因此会收到下面的报错。
  ```

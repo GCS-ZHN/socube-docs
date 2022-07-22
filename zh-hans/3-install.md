@@ -1,6 +1,6 @@
 # 软件安装
 
-## CUDA安装
+## 3.1 CUDA安装
 
 SoCube是基于深度卷积神经网络开发的，我们强烈建议用户在有NVIDIA GPU和NVIDIA CUDA计算套件的环境下，使用GPU加速计算。对于拥有支持CUDA的NVIDIA GPU，用户首先需要安装CUDA，这个可以从[NVIDIA官网](https://developer.nvidia.com/cuda-toolkit-archive)下载并安装。
 
@@ -14,7 +14,7 @@ nvidia-smi
 
 ![nvidia-smi运行结果](assets/fig8.png)
 
-## SoCube安装
+## 3.2 SoCube安装
 
 {% tabs %}
 {% tab title="Pip" %}

@@ -33,7 +33,7 @@ pip install lapjv --no-binary lapjv
 ```
 - Install the corresponding version of numpy, but there may be conflicts with other packages that depend on the numpy version.
 
-## 5.2 Error in PyTables
+## 5.2 Error about pytables
 
 The library is a dependent library for the `to_hdf` API of pandas. Some versions of this package lack the required dynamic C libraries, such as tables-3.7.0-cp38-cp38-win_amd64, you can try installing other versions listed in [PyPi](https://pypi.org/project/tables/) to fix it. For other issues, you can visit its [official GitHub repository](https://github.com/PyTables/PyTables).
 ```
@@ -72,7 +72,7 @@ Traceback (most recent call last):
 ImportError: Missing optional dependency 'pytables'.  Use pip or conda to install pytables.
 ```
 
-## 5.3 Error using docker image
+## 5.3 Error about docker
 
 ### 1. nvidia-container-cli: initialization error
 

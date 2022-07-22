@@ -1,6 +1,6 @@
 # Usage
 
-## 4.1 Basic use
+## 4.1 Basic usage
 
 ### 1. Format of input data
 
