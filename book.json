@@ -3,6 +3,7 @@
     "language": "en",
     "plugins": [
         "livereload",
+        "folding-chapters-2",
         "tabs2",
         "popup",
         "code",
