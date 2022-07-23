@@ -12,7 +12,7 @@ socube --input "D:\data\pbmc-1C-dm.h5ad"
 
 等待软件运行完毕，二聚体检测结果以及中间文件默认会和输入文件放在一起，产生embedding、plots、models、outputs这几个文件夹。其中最终结果在“outputs/你的模型ID/”文件夹下以“final\_result”开头的CSV文件中。用Excel电子表格软件打开，可以看到其有下图三列。第一列是输入数据的细胞样本名称，由用户的输入决定；第二列是SoCube预测该样本为二聚体的概率值，大小介于0\~1之间；第三列是SoCube基于用户给定概率阈值或者默认阈值0.5得出的类型预测，singlet即单体正常细胞，doublet即二聚体。用户既可以使用概率值进行后续自定义筛选，也可以利用第三列进行直接筛选。
 
-![final\_result的的CSV文件文件](assets/fig6.png)
+![final_result的的CSV文件](assets/fig6.png)
 
 ## 4.2 GPU加速运算
 如果用户拥有独立NVIDIA显卡并配置了正确的CUDA，会收到“Using CPU training, but GPU is available, specify ‘—gpu-ids’ to use GPU”的提示。用户只需要在前述命令的基础上，增加指定参数“—gpu-ids”来指定要使用的GPU。GPU的ID可以在前面说到的nvidia-smi命令输出中看到，0,1,2，…分别表示第1,2,3…块GPU（多块的GPU的情况下）
@@ -22,7 +22,7 @@ socube -i "D:\data\pbmc-1C-dm.h5ad" --gpu-ids "0,1"
 
 ## 4.3 基于docker的使用
 
-和前面pip安装后使用本质上一样的，但需要通过docker来启动容器，因此有一定区别。其中“-v”、“--gpus”，“--name”都是`docker run`命令的启动参数，“-v”参数将外部文件夹挂载到docker容器内部路径，切忌不要忘了，因为socube读取的是docker容器内的文件路径。“--gpus”参数负责对容器使用gpu数量进行授权。
+和前面pip安装后使用本质上一样的，但需要通过docker来启动容器，因此有一定区别。其中“-v”、“--gpus”，“--name”都是`docker run`命令的启动参数，“-v”参数将外部文件夹挂载到docker容器内部路径，请务必不要忘了加这个参数。因为socube读取的是docker容器内的文件路径。“--gpus”参数负责对容器使用gpu数量进行授权。
 
 {% tabs %}
 {% tab title="PowerShell" %}
@@ -57,7 +57,7 @@ sudo docker run -v /data:/workspace/datasets \
 ![colab](assets/fig10.png)
 
 ## 4.5 多进程训练
-在内存显存运行的情况下，用户可以使用--enable-multiprocess参数来启用多进程训练加速。
+在内存与显存都充足的情况下，用户可以使用--enable-multiprocess参数来启用多进程训练加速，充分发挥现代CPU的多核计算优势。
 ```bash
 socube -i your_sc.h5ad -o your_sc --gpu-ids 0 --enable-multiprocess
 ```

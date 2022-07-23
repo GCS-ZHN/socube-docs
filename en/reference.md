@@ -1,4 +1,4 @@
-# 参考资料
+# Reference
 
 1. Klein AM, Mazutis L, Akartuna I et al. Droplet barcoding for single-cell transcriptomics applied to embryonic stem cells, Cell 2015;161:1187-1201.
 2. Cao J, Packer JS, Ramani V et al. Comprehensive single-cell transcriptional profiling of a multicellular organism, Science 2017;357:661-667.

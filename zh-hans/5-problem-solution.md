@@ -1,9 +1,9 @@
 # 问题解决
-## 第三方库lapjv报错
+## 5.1 第三方库lapjv报错
 lapjv是socube不可或缺的依赖包，是实现J-V算法的重要工具。更多问题可以去其官方仓库[src-d/lapjv](https://github.com/src-d/lapjv)。
 ### 1. numpy缺失
 
-在安装某些版本的lapjv依赖项之前，你需要预先安装numpy（否则你会看到`ModuleNotFoundError`的错误。没有名为numpy的模块），这是因为这些版本，如v1.3.1，在setup.py中直接`import numpy`。
+在安装某些版本的lapjv依赖项之前，你需要预先安装numpy（否则你会看到`ModuleNotFoundError`的错误。没有名为numpy的模块），这是因为这些版本，如v1.3.1，在setup.py中直接`import numpy`。setup.py是python安装包的执行文件，因此会导致安装失败。
 
 ```python
 import platform
@@ -23,13 +23,13 @@ RuntimeError: module compiled against API version 0xf but this version of numpy 
 ```
 有两种解决方法，如下:
 - 源码安装lapjv，使其使用现在安装的numpy进行重新编译。注意使用的C++编译器需要支持setup.py中CXX_ARGS定义的C++版本，例如“-std=c++11”。最新版的lapjv需要使用"-std=c++17"。因此对没有基础的用户具有一定技术挑战。另外源码安装需要提供cpp库的依赖，对于windows来说，可以安装完整的visual studio 2019，或者直接下载[构建工具](https://visualstudio.microsoft.com/visual-cpp-build-tools/)。下载和安装完成后，重启电脑即可使用。
-```
+```bash
 pip install lapjv --no-binary lapjv
 ```
 - 安装对应版本的numpy，不过可能会和其他包的依赖numpy版本发生冲突。
 
-## 第三方库pytables出错
-该库是pandas库的to_hdf API的依赖库。该包的某些版本缺少所需的动态C库，如tables-3.7.0-cp38-cp38-win_amd64，你可以尝试安装[PyPi](https://pypi.org/project/tables/)中列出的其他版本来解决。其他问题，你可以查看它的[官方GitHub仓库](https://github.com/PyTables/PyTables)。
+## 5.2 第三方库pytables出错
+该库是pandas库的`to_hdf` API的依赖库。该包的某些版本缺少所需的动态C库，如tables-3.7.0-cp38-cp38-win_amd64，你可以尝试安装[PyPi](https://pypi.org/project/tables/)中列出的其他版本来解决。其他问题，你可以查看它的[官方GitHub仓库](https://github.com/PyTables/PyTables)。
 ```
 Traceback (most recent call last):
   File "c:\Users\zhang\anaconda3\envs\socube_test\lib\site-packages\pandas\compat\_optional.py", line 138, in import_optional_dependency
@@ -66,7 +66,7 @@ Traceback (most recent call last):
 ImportError: Missing optional dependency 'pytables'.  Use pip or conda to install pytables.
 ```
 
-## docker镜像使用出错
+## 5.3 docker镜像使用出错
 ### 1. nvidia-container-cli: initialization error
  docker在windows下默认依赖后端是WSL2。而较早版本的windows 10的WSL2不支持GPU，因此会收到下面的报错。
  ```
