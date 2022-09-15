@@ -44,6 +44,10 @@ This parameter is used to specify the number of channels for constructing featur
 
 This parameter is used to reuse the previously generated features. All features will be saved in the "embedding" subdirectory. This parameter is the ID of the specific feature in that subdirectory, which is a "XXXXXXX-XXXXXX-XXX" style string. Example: `--cube-id 20220704-120122-854`.
 
+- --only-embedding
+
+The user may simply want to use the SoCube feature embedding strategy but does not need to detect and remove the doublets, using this parameter means embedding only.
+
 - --learning-rate
 
 The abbreviation is "-lr". This parameter is the training learning rate of an artificial intelligence deep neural network. This parameter can have a significant impact on the detection results. The default value is 1e-3, and can be customized if necessary. Example: `--learning-rate 1e-4`.
