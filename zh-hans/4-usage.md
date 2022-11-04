@@ -22,28 +22,32 @@ socube -i "D:\data\pbmc-1C-dm.h5ad" --gpu-ids "0,1"
 
 ## 4.3 基于docker的使用
 
-和前面pip安装后使用本质上一样的，但需要通过docker来启动容器，因此有一定区别。其中“-v”、“--gpus”，“--name”都是`docker run`命令的启动参数，“-v”参数将外部文件夹挂载到docker容器内部路径，请务必不要忘了加这个参数。因为socube读取的是docker容器内的文件路径。“--gpus”参数负责对容器使用gpu数量进行授权。
+和前面pip安装后使用本质上一样的，但需要通过docker来启动并进入容器，因此有额外步骤`docker run`启动容器以及`docker exec`进入容器。其中“-v”、“--gpus”，“--name”都是`docker run`命令的启动参数，“-v”参数将外部文件夹挂载到docker容器内部路径，请务必不要忘了加这个参数。因为socube读取的是docker容器内的文件路径。“--gpus”参数负责对容器使用gpu数量进行授权。进入容器后即可正常使用socube命令。
 
 {% tabs %}
 {% tab title="PowerShell" %}
 ```powershell
-sudo docker run -v D:/data:/workspace/datasets `
+# 创建容器
+docker run -v D:/data:/workspace/datasets `
        –gpus all `
        –name socube `
-       gcszhn/socube:latest `
-       -input "datasets/pbmc.h5ad" `
-       –gpu-ids "0,1"
+       gcszhn/socube:latest
+
+# 进入容器
+docker exec -it socube bash
 ```
 {% endtab %}
 
 {% tab title="Bash" %}
 ```bash
+# 创建容器
 sudo docker run -v /data:/workspace/datasets \
        –gpus all \
        –name socube \
-       gcszhn/socube:latest \
-       -input "datasets/pbmc.h5ad" \
-       –gpu-ids "0,1"
+       gcszhn/socube:latest
+
+# 进入容器
+sudo docker exec -it socube bash
 ```
 {% endtab %}
 {% endtabs %}

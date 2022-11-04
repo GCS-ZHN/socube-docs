@@ -46,7 +46,7 @@ Pip是一个Python提供的包管理器，可以下载各类Python开发的软�
 在终端中执行前述命令安装SoCube V1.0，其中对国内用户推荐使用[清华大学镜像源](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/)加速软件下载。当看到“Successfully installed \*\*\* socube-1.0”即表示下载安装成功。安装成功后继续在当前终端输入`socube -v`可以看到软件版本提示。国内用户推荐使用-i参数指定(https://pypi.tuna.tsinghua.edu.cn/simple/)。
 
 ```bash
-pip install socube==1.0 -f https://pypi.tuna.tsinghua.edu.cn/simple/
+pip install socube==1.1 -f https://pypi.tuna.tsinghua.edu.cn/simple/
 ```
 ### 4. 关于PyTorch的注意事项
 虽然它还在执行`pip install socube`时自动安装，但有些镜像的版本可能是cpu版本，因此建议用户检查一下安装的版本是否支持gpu（在正确配置GPU与CUDA时`torch.cuda.is_available()`会是`True`）。建议从[pytorch官方网站](https://pytorch.org/get-started/locally/)或pytorch官方的特定pip源下载torch。

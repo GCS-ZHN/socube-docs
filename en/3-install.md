@@ -46,7 +46,7 @@ Pip is a package manager provided by Python to download all kinds of packages de
 Execute the aforementioned command in the terminal to install SoCube V1.0, which is recommended for users in China to use the Tsinghua University mirror to accelerate software download. When you see "Successfully installed \*\*\* socube-1.0" , it means the download and installation are successful. After successful installation, continue to enter `socube -v` in the current terminal to see the software version. The -i parameter is recommended for users in China (https://pypi.tuna.tsinghua.edu.cn/simple/).
 
 ```bash
-pip install socube==1.0 -f https://pypi.tuna.tsinghua.edu.cn/simple/
+pip install socube==1.1 -f https://pypi.tuna.tsinghua.edu.cn/simple/
 ```
 ### 4. Notes on PyTorch
 
