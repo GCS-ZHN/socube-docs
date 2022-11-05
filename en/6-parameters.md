@@ -48,6 +48,10 @@ This parameter is used to reuse the previously generated features. All features 
 
 The user may simply want to use the SoCube feature embedding strategy but does not need to detect and remove the doublets, using this parameter means embedding only.
 
+- --generate-mode
+
+Simulation of in silico doublet generation mode, providing three options: balance, heterotypic and homotypic. Example: `--generate-mode heterotypic`.
+
 - --learning-rate
 
 The abbreviation is "-lr". This parameter is the training learning rate of an artificial intelligence deep neural network. This parameter can have a significant impact on the detection results. The default value is 1e-3, and can be customized if necessary. Example: `--learning-rate 1e-4`.

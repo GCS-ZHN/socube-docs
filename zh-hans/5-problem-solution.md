@@ -16,7 +16,7 @@ CXX_ARGS = {
     "Windows": ["/openmp", "/std:c++latest", "/arch:AVX2"]
 }
 ```
-### 2. RuntimeError: module comiled against API
+### 2. RuntimeError: module compiled against API
 安装lapjv的二进制版本（wheel），使用时可能存在以下`RuntimeError`。这是因为出版商用来编译lapjv的C库API版本与当前安装的numpy不同。
 ```
 RuntimeError: module compiled against API version 0xf but this version of numpy is 0xe

@@ -4,11 +4,11 @@
 
 ## 1.1 Basic Information
 
-SoCube V1.0 is terminal command-based software written in Python without a graphical user interface (GUI), and can run on any server, personal computer, which can run the Python program.
+SoCube V1.1 is terminal command-based software written in Python without a graphical user interface (GUI), and can run on any server, personal computer, which can run the Python program.
 
 ## 1.2 Writing Purpose
 
-This gitbook is a user's guide for SoCube V1.0. It will introduce the requirement, installment and usage of SoCube V1.0. Besides, it provides some common problems' solutions when using SoCube.
+This gitbook is a user's guide for SoCube V1.1. It will introduce the requirement, installment and usage of SoCube V1.1. Besides, it provides some common problems' solutions when using SoCube.
 
 ## 1.3 Background
 

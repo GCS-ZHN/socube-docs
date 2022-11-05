@@ -20,7 +20,7 @@ CXX_ARGS = {
 }
 ```
 
-### 2. RuntimeError: module comiled against API
+### 2. RuntimeError: module compiled against API
 
 The following `RuntimeError` may exist when installing and using the binary version (wheel) of lapjv. This is because the version of the C library API used by the publisher to compile lapjv is different from the currently installed numpy.
 ```

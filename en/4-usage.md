@@ -27,28 +27,32 @@ socube -i "D:\data\pbmc-1C-dm.h5ad" --gpu-ids "0,1"
 
 ## 4.3 Docker-based usage
 
-The docker-based usage is similar to the previously mentioned usage after pip installation, but requires docker to start the container, so there are some differences.  "-v", "--gpus", "--name" are all start parameters of `docker run` command, " -v" parameter mounts the external folder to the internal path of the docker container, because socube reads the file path inside the docker container. The "--gpus" parameter is responsible for authorizing the number of gpu used by the container.
+The docker-based usage is similar to the previously mentioned usage after pip installation, but requires docker to start the container, so there are additional steps `docker run` to start the container and `docker exec` to enter the container.  "-v", "--gpus", "--name" are all start parameters of `docker run` command, " -v" parameter mounts the external folder to the internal path of the docker container, because socube reads the file path inside the docker container. The "--gpus" parameter is responsible for authorizing the number of gpu used by the container.
 
 {% tabs %}
 {% tab title="PowerShell" %}
 ```powershell
-sudo docker run -v D:/data:/workspace/datasets `
+# create container
+docker run -v D:/data:/workspace/datasets `
        –gpus all `
        –name socube `
-       gcszhn/socube:latest `
-       -input "datasets/pbmc.h5ad" `
-       –gpu-ids "0,1"
+       gcszhn/socube:latest
+
+# enter container
+docker exec -it soube bash
 ```
 {% endtab %}
 
 {% tab title="Bash" %}
 ```bash
+# create container
 sudo docker run -v /data:/workspace/datasets \
        –gpus all \
        –name socube \
-       gcszhn/socube:latest \
-       -input "datasets/pbmc.h5ad" \
-       –gpu-ids "0,1"
+       gcszhn/socube:latest
+
+# enter container
+sudo docker exec -it soube bash
 ```
 {% endtab %}
 {% endtabs %}
